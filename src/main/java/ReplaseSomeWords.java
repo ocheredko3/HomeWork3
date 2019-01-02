@@ -10,7 +10,7 @@ public class ReplaseSomeWords {
         while (iterator.hasNext()) {
             String next = iterator.next();
             if (next.equals("бяка")) {
-                iterator.set("Вырезано цензурой");
+                iterator.set("вырезано цензурой");
             } else if (next.equals("Бяка")) {
                 iterator.set("Вырезано цензурой");
             }
