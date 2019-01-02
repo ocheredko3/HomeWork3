@@ -3,23 +3,19 @@ import java.util.ListIterator;
 import java.util.ArrayList;
 
 public class ReplaseSomeWords {
-    public static String readAndReplace(String kbInput) {
-        String stringOut;
 
+    public static String readAndReplace(String kbInput) {
         ArrayList<String> words = new ArrayList<String>(Arrays.asList(kbInput.split("\\s")));
-        private ArrayList<String> replase (ArrayList < String > words) {
-            ListIterator<String> iterator = words.listIterator();
-            while (iterator.hasNext()) {
-                String next = iterator.next();
-                if (next.equals("бяка")) {
-                    iterator.set("Вырезано цензурой");
-                }
-            }
-            for (String subStr : words) {
-                stringOut = subStr + "/t";
-                return stringOut;
+        ListIterator<String> iterator = words.listIterator();
+        while (iterator.hasNext()) {
+            String next = iterator.next();
+            if (next.equals("бяка")) {
+                iterator.set("Вырезано цензурой");
+            } else if (next.equals("Бяка")) {
+                iterator.set("Вырезано цензурой");
             }
         }
+        return String.join(" ", words);
     }
 }
 
