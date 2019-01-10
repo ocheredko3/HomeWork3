@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.ListIterator;
 import java.util.ArrayList;
 
-public class ReplaseSomeWords {
+public class ReplaceSomeWords {
 
     public static String readAndReplace(String kbInput) {
         ArrayList<String> words = new ArrayList<String>(Arrays.asList(kbInput.split("\\s")));
